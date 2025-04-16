@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/hemanthpathath/logsnag/logsnag-backend/internal/router"
+	"github.com/hemanthpathath/logshack/logshack-backend/internal/router"
 )
 
 func main() {
