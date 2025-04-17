@@ -11,6 +11,14 @@ import (
 
 var Pool *pgxpool.Pool
 
+func InitPool(databaseURL string) {
+	var err error
+	Pool, err = pgxpool.New(context.Background(), databaseURL)
+	if err != nil {
+		log.Fatalf("Failed to connect to database: %v", err)
+	}
+}
+
 func Init() {
 	dsn := os.Getenv("DATABASE_URL")
 	var err error

@@ -11,6 +11,7 @@ func NewRouter() http.Handler {
 
 	// Define your routes here
 	mux.HandleFunc("/health", handler.HealthHandler)
-	mux.HandleFunc("/events", handler.EventsHandler)
+	mux.HandleFunc("/events", handler.CreateEvent)
+
 	return mux
 }
